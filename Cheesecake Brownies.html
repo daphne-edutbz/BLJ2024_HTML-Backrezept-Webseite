@@ -6,41 +6,50 @@
     <title>HTML Backrezept-Webseite</title>
     <style>
 
-body {
-            background-color: rgba(35, 81, 60, 1); /* Green background */
-            margin: 0; /* Remove default margins */
-            font-family: Arial, sans-serif; /* font */
-            color: white; /* Set text color for better contrast */
-        }
-
-        /* Add CSS styles here */
-        header {
-    background-color: rgba(1, 20, 11, 0.99); /* Header background color */
-    color: white; /* Text color */
-    padding: 20px; /* Spacing around the content */
-    text-align: center; /* Center-align the text */
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #01140B; /* Optional background color */
     position: fixed; /* Fix the header at the top */
-    top: 0; /* Align it to the top of the viewport */
-    width: 100%; /* Ensure the header spans the full width */
-    z-index: 1000; /* Ensure it stays on top of other elements */
+    top: 0; /* Stay at the top of the page */
+    left: 0; /* Ensure the header spans the entire width */
+    width: 100%; /* Ensure full width */
+    z-index: 1000; /* Ensures the header stays on top of other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds shadow */
+    padding-top: 20px; /* Adjust top padding so the content doesn't overlap */
 }
 
-        header h1 {
-            margin: 0; /* Remove default margin */
-            font-size: 2rem; /* Adjust title size */
-        }
+body {
+    background-color: rgba(35, 81, 60, 1); /* Green background */
+    margin: 0; /* Remove default margins */
+    font-family: Arial, sans-serif; /* font */
+    color: white; /* Set text color for better contrast */
+    padding-top: 100px; /* Ensure content doesn't get hidden under the fixed header */
+}
+
+.header-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px; /* rounded corners */
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
 
         nav {
     position: fixed;
-    top: 76px; /* Direkt unter dem Header positioniert */
+    top: 100px; /* positioned under Header */
     width: 100%;
     background-color: #834035;
     padding: 10px 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten für
-    Sichtbarkeit */
-    z-index: 1000; /* Stellt sicher, dass die Navigation über
-    den Inhalten bleibt */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
         }
 
 nav a {
@@ -53,7 +62,7 @@ color: #ffffff;
 nav a:hover {
     background-color: #ffffff; /* White background on hover */
     color: #834035; /* Dark text for contrast */
-    border-radius: 5px; /* Optional rounded corners */
+    border-radius: 5px; /* rounded corners */
     padding: 5px; /* Adds padding to make the background more visible */
 }
          /* Center the entire section */
@@ -75,39 +84,249 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a shadow for styling */
 }
 
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.flex-row img {
+    max-width: 400px; /* Adjust the width as needed */
+    width: 100%; /* Ensures responsiveness */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners for a smoother look */
+}
+
+.flex-row.image-left {
+    flex-direction: row-reverse; /* Reverses the order of text and image */
+}
+
+
 
     </style>
 
 </head>
 <body>
     <header>
+        <img src="StockImageBrownie.jpeg" alt="Header Image" class="header-image">
         <h1>Fudgy Cheesecake Brownies</h1>
     </header>
     <nav>
         <a href="#Homepage">Homepage</a>
         <a href="#Ingredients">Ingredients</a>
         <a href="#Recipe">Recipe</a>
-        <a href="#Color Concept">Color Concept</a>
-        <a href="#sources">sources</a>
+        <a href="#Mockup">Mockup</a>
+        <a href="#Sources">Sources</a>
+        <a href="#Impressum">Impressum</a>
+
         </nav>
 
-        <div id="#Homepage" class="content-section">
+        <div id="Homepage" class="content-section">
             <p>On this Website you can learn how to make Fudgy Cheesecake Brownies.</p>
-            <img src="finalProduct.jpg" alt="Finished Brownies">
-            <img src="closeupBrownie.jpg" alt="Close-up of Brownie">
+            <img src="finalProduct.jpg" alt="Finished Brownies" style="max-width: 75%; height: auto;">
+            <img src="closeupBrownie.jpeg" alt="Close-up of Brownie"style="max-width: 50%; height: auto;">
+            <img src="closeupBrownie2.jpeg" alt="Close-up of Brownie"style="max-width: 50%; height: auto;">
         </div>
         
-        <div id="#Ingredients" class="content-section">
+        <div id="Ingredients" class="content-section" style="display: flex; align-items: center;">
+            <div style="flex: 1; margin-right: 20px;">
+                <p>Here are the Ingredients:</p>
+                <p>For the brownie layer:</p>
+                <ul>
+                    <li>190 g butter</li>
+                    <li>200 g dark chocolate</li>
+                    <li>160 g wheat flour (type 405)</li>
+                    <li>50 g cocoa powder</li>
+                    <li>3 eggs (size M)</li>
+                    <li>200 g fine sugar</li>
+                    <li>60 g light brown sugar</li>
+                    <li>1 tbsp vanilla extract</li>
+                    <li>½ tsp salt</li>
 
-
-
+                    <p>For the cheesecake layer:</p>
+                    <li>230 g cream cheese (room temperature)</li>
+                    <li>80 g fine sugar</li>
+                    <li>1 egg (size M)</li>
+                    <li>2 tsp vanilla extract</li>
+                </ul>
+            </div>
+        
+            <!-- Image section -->
+            <div style="flex: 1;">
+                <img src="Ingredients.jpeg" alt="Ingredients Brownies" style="max-width: 100%; height: auto;">
+            </div>
         </div>
 
+        <div id="Recipe" class="content-section">
+            <h2>Preparation</h2>
+            <div class="flex-row">
+                <div>
+                    <h3>1. Preheat the Oven:</h3>
+                    <p>Set the oven to 170°C (340°F) with top and bottom heat.</p>
+                </div>
+                <div>
+                    <img src="pre-heat.jpeg" alt="Preheating the oven">
+                </div>
+            </div>
+        
+            <div class="flex-row image-left">
+                <div>
+                    <h3>2. Prepare the Baking Pan:</h3>
+                    <p>Line a square baking pan (approximately 20 x 20 cm) with parchment paper, letting the paper overhang on the sides. This will make it easier to lift the brownies out later.</p>
+                </div>
+            </div>
+        
+            <h2>Make the Brownie Batter</h2>
+            <div class="flex-row">
+                <div>
+                    <h3>1. Melt Butter and Chocolate:</h3>
+                    <p>Place 190 g of butter and 200 g of roughly chopped dark chocolate into a heatproof bowl.</p>
+                </div>
+                <div>
+                    <img src="chopchoc.jpeg" alt="chopped chocolate">
+                </div>
+            </div>
+            <div class="flex-row image-left">
+                <div>
+                    <p>Melt the mixture using a double boiler or in the microwave in short bursts. Stir the mixture until smooth and let it cool for 5–10 minutes.</p>
+                </div>
+                <div>
+                    <img src="meltchocandbutter.jpeg" alt="Butter and Chocolate in a bowl">
+                    <img src="melt2.jpeg" alt="Bowl in boiling water">
+                    <img src="melted.jpeg" alt="Mixture is smooth">
+                </div>
+            </div>
+        
+            <div class="flex-row">
+                <div>
+                    <h3>2. Whisk Eggs and Sugar:</h3>
+                    <p>In a large bowl, whisk together 3 eggs, 200 g sugar, 60 g light brown sugar, and 1 tablespoon vanilla extract with a whisk or hand mixer for 2-3 minutes until frothy.</p>
+                </div>
+                <div>
+                    <img src="3Eggs.jpeg" alt="3 cracked eggs in a bowl">
+                    <img src="addSugar.jpeg" alt="3 cracked eggs and sugar in a bowl">
+                <img src="vanillaExtract.jpeg" alt="3 cracked eggs in a bowl">
+                <img src="Mixen.jpeg" alt="3 cracked eggs and sugar in a bowl">
+                </div>
+            </div>
+        
+                <div>
+                    <h3>3. Add the Chocolate-Butter Mixture:</h3>
+                    <p>Slowly pour the cooled chocolate mixture into the egg-sugar mixture while stirring constantly.</p>
+                </div>
+            </div>
+        
+            <div class="flex-row image-left">
+                <div>
+                    <h3>4. Add Dry Ingredients:</h3>
+                    <p>Sift 160 g of flour, 50 g of cocoa powder, and ½ teaspoon salt into the bowl. Gently fold the dry ingredients into the wet ingredients with a spatula until smooth. Avoid over-mixing to keep the batter fudgy.</p>
+                </div>
+                <div>
+                    <img src="dryIngredientsflour.jpeg" alt="Flour in Brownie Batter">
+                    <img src="cocoaPowder.jpeg" alt="add cocoa powder">
+                    <img src="Salt.jpeg" alt="add salt">
+                </div>
+            </div>
+        
+            <h2>Make the Cheesecake Layer</h2>
+            <div class="flex-row">
+                <div>
+                    <h3>1. Prepare the Cream Cheese Mixture:</h3>
+                    <p>In a bowl, combine 230 g of cream cheese (room temperature), 80 g sugar, 1 egg, and 2 teaspoons vanilla extract. </p>
+                </div>
+                <div>
+                    <img src="creamcheese.jpeg" alt="Add cream cheese to a Bowl">
+                    <img src="cheese-Sugar.jpeg" alt="Add cream cheese and sugar to a Bowl">
+            <img src="cheese-sugar-eggs.jpeg" alt="Add cream cheese, sugar and an egg to a Bowl">
+            <img src="cheese-sugar-eggs-extract.jpeg" alt="Add cream cheese, sugar, an egg and vanilla extract to a Bowl">
+                </div>
+            </div>
 
+            <div class="flex-row image-left">                
+            <p>Use a hand mixer or whisk to blend everything until smooth and creamy.</p>
+            <img src="cheeseMix.jpeg" alt="Mix cheesecake layer with a blender">
+        </div>
+        
+            <h2>Layer and Swirl the Brownies</h2>
+            <div class="flex-row">
+                <div>
+                    <h3>1. First Layer:</h3>
+                    <p>Pour about half of the brownie batter into the prepared baking pan and smooth it out with a spatula.</p>
+                </div>
+                <div>
+                    <img src="firstLayer.jpeg" alt="The first Layer in the Baking pan">
+                </div>
+            </div>
+        
+            <div class="flex-row image-left">
+                <div>
+                    <h3>2. Add the Cheesecake Layer:</h3>
+                    <p>Spread the entire cheesecake mixture evenly over the brownie batter.</p>
+                </div>
+                <div>
+                    <img src="secondLayer.jpeg" alt="The second Layer in the Baking pan">
+                </div>
+            </div>
+        
+            <h2>Baking</h2>
+            <div class="flex-row">
+                <div>
+                    <h3>1. Bake the Brownies:</h3>
+                    <p>Place the pan in the preheated oven and bake for about 25–30 minutes. The edges should be firm, but the center should still have a slight wobble. Check for doneness with a toothpick: it should come out with only a few moist crumbs (not raw batter).</p>
+                </div>
+                <div>
+                    <img src="rawOven.jpeg" alt="put baking pan in oven">
+                </div>
+            </div>
+        </div>
+        <h2>Cool and Serve</h2>
+        <h3>1. Let the Brownies Cool:</h3>
+        Allow the brownies to cool completely in the pan on a wire rack.
+        <h3>2. Lift the Brownies from the Pan:</h3>
+        Use the overhanging parchment paper to carefully lift the brownies out of the pan.
+        <h3>3. Cut into Pieces:</h3>
+        Use a sharp knife to cut the brownies into 9 or 16 squares, depending on the desired size.
 
+        <h2>Tips:.</h2>
+            Fudgy Consistency: Don't bake the brownies for too long so that the center stays moist and fudgy.
+            Storage: Keep the brownies airtight in the refrigerator for up to 3 days. Bring them to room temperature or warm them slightly before serving.
+            For Chocolate Lovers: Use chocolate with a higher cocoa content for a more intense flavor.
+</div>
 
+<div id="Mockup" class="content-section">
+    <p>Here is my Mockup for this Website on Figma:</p>
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/hcawDkPKNapUoH02VinxAG/HTML-Backrezept-Webseite?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+</div>
 
+<div id="Sources" class="content-section">
+    <p>The Inspiration came from 
+        <a href="https://www.instagram.com/reel/DC7AC8rvD7d/?igsh=MWVtcWhtOGVyMDVzdg%3D%3D%20has%20context%20menu" target="_blank">
+            this video
+        </a>
+    </p>
+    <p>The Recipe is from 
+        <a href="https://emsfoodiefix.com/fudgy-cheesecake-brownies/" target="_blank">
+            this website
+        </a>
+    </p>
+    <p>You can also download the recipe as a PDF: 
+        <a href="Recipe.pdf" download>
+            Download PDF
+        </a>
+    </p>
+</div>
 
+<div id="Impressum" class="content-section">
+    <h2>Impressum</h2>
+    <p><strong>Website Owner:</strong><br>
+    Daphne McNamara</p>
 
+    <p><strong>Contact:</strong><br>
+    Email: <a href="daphne.mcnamara@noseryoung.com">daphne.mcnamara@noseryoung.com</a></p>
+
+<footer>
+    <p>&copy; 2024 BLJ2024_HTML-Backrezept-Webseite | <a href="#Impressum">Impressum</a></p>
+</footer>
 </body>
 </html>
