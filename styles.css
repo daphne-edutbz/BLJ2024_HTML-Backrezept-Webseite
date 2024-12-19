@@ -1,0 +1,106 @@
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #01140B; /* Optional background color */
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Stay at the top of the page */
+    left: 0; /* Ensure the header spans the entire width */
+    width: 100%; /* Ensure full width */
+    z-index: 1000; /* Ensures the header stays on top of other elements */
+    padding-top: 20px; /* Adjust top padding so the content doesn't overlap */
+}
+
+body {
+    background-color: rgba(35, 81, 60, 1); /* Green background */
+    margin: 0; /* Remove default margins */
+    font-family: Arial, sans-serif; /* font */
+    color: white; /* Set text color for better contrast */
+    padding-top: 100px; /* Ensure content doesn't get hidden under the fixed header */
+}
+
+.header-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px; /* rounded corners */
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+
+        nav {
+    position: fixed;
+    top: 100px; /* positioned under Header */
+    width: 100%;
+    background-color: #834035;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+        }
+
+nav a {
+margin: 0 15px;
+text-decoration: none;
+color: #ffffff;
+
+}
+
+nav a:hover {
+    background-color: #ffffff; /* White background on hover */
+    color: #834035; /* Dark text for contrast */
+    border-radius: 5px; /* rounded corners */
+    padding: 5px; /* Adds padding to make the background more visible */
+}
+         /* Center the entire section */
+         .content-section {
+    text-align: center;
+    padding: 60px 20px; /* Adjust padding to control overall spacing */
+}
+
+.content-section p {
+    margin-top: 100px; /* Move the paragraph lower */
+}
+
+.content-section img {
+    margin-top: 20px; /* Add space between the text and image */
+    max-width: 600px; /* Control image size */
+    width: 100%; /* Ensure responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a shadow for styling */
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.flex-row img {
+    max-width: 400px; /* Adjust the width as needed */
+    width: 100%; /* Ensures responsiveness */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners for a smoother look */
+}
+
+.flex-row.image-left {
+    flex-direction: row-reverse; /* Reverses the order of text and image */
+}
+
+footer {
+    background-color: #01140B;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Start from the very left */
+    width: 100%; /* Ensure it spans the full width */
+    margin: 0; /* Remove margin to avoid shrinking */
+}
